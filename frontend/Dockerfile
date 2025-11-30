@@ -5,7 +5,7 @@ WORKDIR /app
 # Copy package files (from root context)
 COPY package*.json ./
 COPY tsconfig.json ./
-RUN npm ci
+RUN npm install
 
 # Copy source files
 COPY index.html ./
