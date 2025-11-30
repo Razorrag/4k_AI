@@ -22,6 +22,7 @@ COPY api/ ./api/
 COPY public/ ./public/
 
 # Build production bundle
+ENV VITE_APP_ENV=production
 RUN npm run build
 
 # Production image with Python (NO NGINX!)
