@@ -13,7 +13,7 @@ class Settings(BaseSettings):
     
     # File Upload Settings
     MAX_FILE_SIZE: int = 50 * 1024 * 1024  # 50MB
-    ALLOWED_EXTENSIONS: set = {"jpg", "jpeg", "png", "webp"}
+    ALLOWED_EXTENSIONS: list[str] = ["jpg", "jpeg", "png", "webp"]
     UPLOAD_DIR: Path = Path("/app/uploads")
     PROCESSED_DIR: Path = Path("/app/processed")
     MODELS_DIR: Path = Path("/app/models")
