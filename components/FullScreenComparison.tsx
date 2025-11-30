@@ -15,7 +15,6 @@ import {
     ArrowsPointingInIcon
 } from './Icons';
 import { ActionButton } from './ui/ActionButton';
-import { ComparisonFloatingControls } from './ComparisonFloatingControls';
 import { useAppContext } from '../context/AppContext';
 import { useImageProcessor } from '../hooks/useImageProcessor';
 import type { ProcessedImage } from '../types';
@@ -586,13 +585,6 @@ export const FullScreenComparison: React.FC<FullScreenComparisonProps> = ({ imag
                 </div>
             </div>
 
-            {/* Floating Controls */}
-            <ComparisonFloatingControls
-                image={selectedImage}
-                onShare={() => console.log('Share clicked')}
-                onInfo={() => console.log('Info clicked')}
-                onSettings={() => console.log('Settings clicked')}
-            />
         </motion.div>
     );
 };
